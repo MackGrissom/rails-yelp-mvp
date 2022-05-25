@@ -1,0 +1,9 @@
+<h1> <strong> Add a new review </strong> </h1>
+
+<%=  form_for [@restaurant, @review] do |f| %>
+    <%=  f.text_field :content, placeholder: "Leave your review here" %>
+    <%= f.integer :rating, placeholder: "Please enter a num 0-5" %>
+    <%= f.submit %>
+    <%= end %>
+
+    <%= link_to "Restaurants", restaurants_path %>

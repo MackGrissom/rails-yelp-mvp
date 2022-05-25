@@ -1,0 +1,26 @@
+<h1> Add a new Restaurant!" </h1>
+</br>
+</br>
+</br>
+<%=  form_for @restaurant do |f| %>
+  <%= f.text_field :name, placeholder: " restaurant name" %>
+  </br>
+  </br>
+
+  <%= f.telephone_field :phone_number, placeholder: " phone number" %>
+  </br>
+  </br>
+
+  <%= f.text_field :address, placeholder: "address" %>
+  </br>
+  </br>
+
+  <%= f.text_field :category, placeholder: 'Category of Restaurant?' %>
+  </br>
+  </br>
+
+  <%= f.submit %>
+<% end %>
+</br>
+</br>
+<%= link_to 'Restaurants', restaurants_path %>

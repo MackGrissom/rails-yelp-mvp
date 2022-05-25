@@ -1,0 +1,29 @@
+<h1>Yelp</h1>
+<%= link_to "Add new restaurant", new_restaurant_path %>
+</br>
+</br>
+<tbody>
+  <% @restaurants.each do |restaurant| %>
+    <tr>
+    </br>
+        <td> <strong> Name: </strong><%= link_to restaurant.name, restaurant_path(restaurant)  %></td>
+        </br>
+        <td> <strong> Address: </strong> <%=  restaurant.address %></td>
+        </br>
+        <td> <strong> Category: </strong> <%=  restaurant.category %></td>
+        </br>
+        <td> <strong> Phone: </strong>  <%=  restaurant.phone_number %></td>
+        </br>
+        </br>
+
+        <td> <%= link_to "Show", restaurant %></td>
+        </br>
+      <%=  link_to 'Edit', edit_restaurant_path(restaurant) %>
+</br>
+      <%= link_to 'Destroy', restaurant, method: :delete, data: {confirm: "Are you sure?"} %>
+    </tr>
+    </br>
+    </br>
+  <% end %>
+  
+</tbody>
